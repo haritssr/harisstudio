@@ -20,6 +20,8 @@ const AnotherExample = [
   { src: '/beauty.jpg', name: 'Beauty' },
   { src: '/minimalist.jpg', name: 'Minimalist' },
   { src: '/forest.jpg', name: 'Forest' },
+  { src: '/geometry.jpg', name: 'Geometry' },
+
 ];
 
 export default function Showcase() {
