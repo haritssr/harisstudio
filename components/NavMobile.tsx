@@ -4,11 +4,9 @@ import { Menu } from '@headlessui/react';
 export default function NavMobile() {
   return (
     <nav className='flex items-center justify-between w-full h-auto bg-white md:hidden bg-opacity-90 backdrop-blur-sm'>
-      <Link href='/'>
-        <a className='pl-5 text-xl font-bold group'>
-          <span className='text-gray-500 group-hover:text-opacity-70'>haris</span>
-          <span className='text-gray-700 underline group-hover:text-opacity-70'>studio</span>
-        </a>
+      <Link href='/' passHref className='pl-5 text-xl font-bold group'>
+        <span className='text-gray-500 group-hover:text-opacity-70'>haris</span>
+        <span className='text-gray-700 underline group-hover:text-opacity-70'>studio</span>
       </Link>
 
       <Menu as='div' className='z-50'>
@@ -38,13 +36,9 @@ const Navigation = ({ to, title }: { to: string; title: string }) => {
     <Menu.Item>
       {({ active }) => (
         <button className='w-full text-left'>
-          {active ? (
-            <Link href={`/${to}`}>
-              <a className={style}>{title}</a>
-            </Link>
-          ) : (
-            <Link href={`/${to}`}>
-              <a className={style}>{title}</a>
+          {active && (
+            <Link href={`/${to}`} className={style}>
+              {title}
             </Link>
           )}
         </button>

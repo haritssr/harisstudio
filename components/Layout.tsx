@@ -14,10 +14,11 @@ export default function Layout({
 }) {
   const image = 'https://harislab.com/public/HarisLab.png';
   const type = 'website';
+  const title = `${browserTitle} - Haris Studio`;
   return (
     <div className='bg-[#F5F5F7] pb-10'>
       <Head>
-        <title>{browserTitle} - Haris Studio</title>
+        <title>{title}</title>
         <link rel='icon' href='/harislab_ico.ico' />
         <meta name='robots' content='follow, index' />
         <meta content={description} name='description' />

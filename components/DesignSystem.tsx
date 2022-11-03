@@ -20,11 +20,13 @@ export const Topic = ({ name }: { name: string }) => {
 
 export function InternalLink({ name, to }: { name: string; to: string }) {
   return (
-    <Link href={to}>
-      <a className='flex items-center space-x-2 text-blue-600 cursor-pointer hover:underline'>
-        {name}
-        <RightArrow />
-      </a>
+    <Link
+      passHref
+      href={to}
+      className='flex items-center space-x-2 text-blue-600 cursor-pointer hover:underline'
+    >
+      {name}
+      <RightArrow />
     </Link>
   );
 }
